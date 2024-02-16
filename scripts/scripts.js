@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         acc.classList.add('accordionBot--active')
         content.style.maxHeight = content.scrollHeight + 'px'
         footerRight.style.transition = 'unset'
-        footerRight.style.paddingTop = '65px'
+        footerRight.style.paddingTop = '45px'
       }
     })
   })

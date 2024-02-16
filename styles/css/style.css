@@ -1064,7 +1064,13 @@ body.no-scroll {
   border-radius: 20px;
   outline: 1px solid rgba(255, 255, 255, 0.1);
   width: 448px;
-  width: calc(320px + 128 * (100vw - 992px) / 608);
+  height: 280px;
+}
+@media screen and (max-width: 1600px) and (min-width: 480px) {
+  .map--alt {
+    width: calc(320px + 128 * (100vw - 992px) / 608);
+    height: calc(200px + 80 * (100vw - 992px) / 608);
+  }
 }
 .map .ymaps-2-1-79-ground-pane {
   -ms-filter: grayscale(1) invert(90%);
@@ -1077,14 +1083,6 @@ body.no-scroll {
 .map .ymaps-2-1-79-gototaxi__container,
 .map .ymaps-2-1-79-gotoymaps__container {
   display: none;
-}
-.map__item {
-  height: 280px;
-}
-@media screen and (max-width: 1600px) and (min-width: 480px) {
-  .map__item {
-    height: calc(200px + 80 * (100vw - 992px) / 608);
-  }
 }
 
 .accordion-content,

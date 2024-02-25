@@ -57,6 +57,28 @@ $(document).ready(function () {
   const tabs = document.querySelectorAll('.tab__target')
   const pages = document.querySelectorAll('.tab__info')
 
+  // function tabs(target, info) {
+  //   target?.forEach((tab, idx) => {
+  //     tab.addEventListener('click', () => {
+  //       target.forEach((tab) => tab.classList.remove('tab__target--active'))
+  //       info.forEach((page) => {
+  //         page.classList.remove('tab__info--active')
+  //         setTimeout(() => {
+  //           page.classList.remove('tab__info--opacity')
+  //         }, 380)
+  //       })
+
+  //       tab.classList.add('tab__target--active')
+  //       info[idx].classList.add('tab__info--active')
+
+  //       setTimeout(() => {
+  //         info[idx].classList.add('tab__info--opacity')
+  //       }, 380)
+  //     })
+  //   })
+  // }
+  // tabs(tab, pages)
+
   tabs?.forEach((tab, idx) => {
     tab.addEventListener('click', () => {
       tabs.forEach((tab) => tab.classList.remove('tab__target--active'))

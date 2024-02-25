@@ -90,8 +90,14 @@ body {
 
 .container {
   width: 100%;
-  max-width: 100%;
+  max-width: 1470px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: 600px) {
+    max-width: calc(962px + (1470 - 962) * ((100vw - 600px) / (1920 - 600)));
+  }
 }
 
 [class$="__icon"],
@@ -115,7 +121,6 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 12px 42px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 700;
@@ -157,6 +162,16 @@ body {
     border-radius: 15px;
     z-index: -2;
   }
+
+  &--alt {
+    @media screen and (min-width: 600px) {
+      font-size: calc(24px + (32 - 24) * ((100vw - 600px) / (1920 - 600)));
+      padding-top: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      padding-bottom: calc(10px + (20 - 10) * ((100vw - 600px) / (1920 - 600)));
+      padding-left: calc(50px + (150 - 50) * ((100vw - 600px) / (1920 - 600)));
+      padding-right: calc(50px + (150 - 50) * ((100vw - 600px) / (1920 - 600)));
+    }
+  }
 }
 
 .link {
@@ -168,7 +183,6 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   display: block;
-  padding: 15px 30px;
   color: rgb(255, 255, 255);
   background-color: transparent;
   font-size: 11px;
@@ -239,6 +253,42 @@ body {
 
       path {
         transition: fill-opacity .23s ease-in-out;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-120%);
+    right: -20px;
+    width: 32px;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 1;
+
+    @media screen and (min-width: 600px) {
+      font-size: calc(10px + (12 - 10) * ((100vw - 600px) / (1920 - 600)));
+      right: calc(-16px + (20 - 16) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      translate: 50% -50%;
+      width: 24px;
+      height: 24px;
+      border-radius: 108px;
+      background-color: rgb(238, 79, 79);
+      z-index: -1;
+
+      @media screen and (min-width: 600px) {
+        width: calc(20px + (24 - 20) * ((100vw - 600px) / (1920 - 600)));
+        height: calc(20px + (24 - 20) * ((100vw - 600px) / (1920 - 600)));
       }
     }
   }
@@ -370,6 +420,41 @@ body {
       &::before {
         opacity: 0;
       }
+    }
+  }
+
+  &--big {
+    @media screen and (min-width: 600px) {
+      font-size: calc(12px + (16 - 12) * ((100vw - 600px) / (1920 - 600)));
+      padding-top: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      padding-bottom: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      padding-left: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+      padding-right: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+    }
+  }
+
+  &--bigGreen {
+    @media screen and (min-width: 600px) {
+      font-size: calc(12px + (16 - 12) * ((100vw - 600px) / (1920 - 600)));
+      padding-top: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      padding-bottom: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      padding-left: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+      padding-right: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &::before,
+    &::after {
+      transform: skewX(-16deg);
+    }
+
+    &::before {
+      background-image: linear-gradient(90.00deg, rgb(13, 152, 119), rgb(46, 176, 145) 119.675%);
+    }
+  }
+
+  &.tab__target--active {
+    &::before {
+      background-image: linear-gradient(90.00deg, rgb(13, 152, 119), rgb(46, 176, 145) 119.675%);
     }
   }
 }
@@ -818,13 +903,13 @@ body {
       right: -20px;
       width: 24px;
       color: rgb(255, 255, 255);
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 500;
       text-align: center;
       z-index: 1;
 
       @media screen and (min-width: 600px) {
-        font-size: calc(7px + (9 - 7) * ((100vw - 600px) / (1920 - 600)));
+        font-size: calc(8px + (10 - 8) * ((100vw - 600px) / (1920 - 600)));
         right: calc(-16px + (20 - 16) * ((100vw - 600px) / (1920 - 600)));
       }
 
@@ -3000,10 +3085,434 @@ body {
   }
 }
 
-@media (max-width: 576px) {
-  .label {
+.office {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__title {
+
+    &::after,
+    &::before {
+      border-radius: 15px 15px 0 0;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+
+    @media screen and (min-width: 600px) {
+      margin-bottom: calc(60px + (126 - 60) * ((100vw - 600px) / (1920 - 600)));
+      gap: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: 600px) {
+      margin-top: calc(25px + (45 - 25) * ((100vw - 600px) / (1920 - 600)));
+      margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &--alt {
+      @media screen and (min-width: 600px) {
+        margin-bottom: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+  }
+
+  &__item {
+    width: 32.3%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #CED4D9;
+    transition: background-color .23s ease-in-out;
+
+    @media screen and (min-width: 600px) {
+      padding: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media screen and (min-width: 600px) {
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-title {
+      color: #20292a;
+      font-weight: 700;
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(18px + (24 - 18) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-text {
+      color: rgb(118, 124, 125);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(12px + (14 - 12) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-img {
+      border-radius: 5px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      margin-top: auto;
+
+      @media screen and (min-width: 600px) {
+        height: calc(180px + (218 - 180) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+  }
+
+  &__num {
+    padding: 10px 15px;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
     font-size: 12px;
-    letter-spacing: -0.24px;
+    border-radius: 108px;
+    background: rgb(238, 79, 79);
+  }
+
+  &__bot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    margin-left: 0;
+  }
+
+  &__tab {
+    display: flex;
+
+    @media screen and (min-width: 600px) {
+      gap: calc(20px + (60 - 20) * ((100vw - 600px) / (1920 - 600)));
+      margin-bottom: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &-box {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 600px) {
+        gap: calc(20px + (60 - 20) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+  }
+
+  &__target {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+
+      @media screen and (min-width: 600px) {
+        padding-left: calc(20px + (40 - 20) * ((100vw - 600px) / (1920 - 600)));
+        padding-right: calc(20px + (40 - 20) * ((100vw - 600px) / (1920 - 600)));
+      }
+
+      .office__num {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 15px;
+      z-index: 1;
+
+      @media screen and (min-width: 600px) {
+        height: calc(250px + (310 - 250) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    &-box {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px 20px;
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 15px 15px;
+    }
+
+    &-title {
+      font-weight: 700;
+      color: #fff;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(18px + (24 - 18) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-link {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: rgba(255, 255, 255, 0.75);
+      transition: color .23s ease-in-out;
+
+      &:hover {
+        color: #0D9877;
+
+        [class$="-icon"] {
+          svg {
+            path {
+              fill: #0D9877;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(12px + (14 - 12) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-icon {
+      margin-top: 2px;
+      margin-top: calc(0px + (2 - 0) * ((100vw - 600px) / (1920 - 600)));
+
+      svg {
+        path {
+          transition: fill .23s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__user {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
+    @media screen and (min-width: 600px) {
+      padding: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &-title {
+      color: #20292a;
+      font-size: 32px;
+      font-weight: 700;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(24px + (32 - 24) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-item {
+      display: flex;
+
+      @media screen and (min-width: 600px) {
+        gap: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-img {
+      -o-object-fit: cover;
+      object-fit: cover;
+
+      @media screen and (min-width: 600px) {
+        width: calc(250px + (290 - 250) * ((100vw - 600px) / (1920 - 600)));
+        height: calc(250px + (290 - 250) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-elem {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    &-name {
+      color: rgb(32, 41, 42);
+      font-weight: 700;
+      line-height: 125%;
+      margin-bottom: 15px;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(18px + (24 - 18) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-who {
+      color: rgb(118, 124, 125);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(14px + (16 - 14) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-organization {
+      color: rgb(32, 41, 42);
+      font-weight: 700;
+      line-height: 125%;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(16px + (18 - 16) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-activity {
+      color: rgb(118, 124, 125);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(14px + (16 - 14) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @media screen and (min-width: 600px) {
+        gap: calc(15px + (60 - 15) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(20px + (38 - 20) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-phone {
+      color: rgb(32, 41, 42);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(16px + (18 - 16) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-mail {
+      color: rgb(118, 124, 125);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(14px + (16 - 14) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-link {
+      margin-left: auto;
+    }
+  }
+
+  .tab__info {
+    width: 67%;
+  }
+
+  .logo {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__img {
+      @media screen and (min-width: 600px) {
+        height: calc(30px + (40 - 30) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+  }
+}
+
+.tab {
+  &__info {
+    display: none;
+    opacity: 0;
+    transition: opacity .23s ease-in-out;
+
+    &--active {
+      display: block;
+    }
+
+    &--opacity {
+      opacity: 1;
+    }
   }
 }
 
@@ -3078,6 +3587,21 @@ body {
     }
   }
 
+  .office {
+    &__tab {
+      flex-direction: column-reverse;
+
+      &-box {
+        display: flex;
+        width: unset;
+      }
+    }
+
+    .tab__info {
+      width: unset;
+    }
+  }
+
   .footer {
     &__content {
       &::after {
@@ -3114,5 +3638,18 @@ body {
     &__box {
       width: 59%;
     }
+  }
+
+  .office {
+    &__item {
+      width: 49%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .label {
+    font-size: 12px;
+    letter-spacing: -0.24px;
   }
 }

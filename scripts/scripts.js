@@ -29,6 +29,21 @@ $(document).ready(function () {
     placeholder: 'Проблема с доступом',
   })
 
+  $('.office__edit-activity').select2({
+    dropdownParent: $('.office__edit-select'),
+    placeholder: 'Выберите из списка',
+  })
+
+  $('.office__businessCardHolder-sorting').select2({
+    dropdownParent: $('.office__businessCardHolder-select'),
+    placeholder: 'Выберите из списка',
+  })
+
+  $('.office__presentations-sorting').select2({
+    dropdownParent: $('.office__presentations-select'),
+    placeholder: 'Выберите из списка',
+  })
+
   Fancybox.bind('[data-fancybox]', {})
 
   if (document.querySelector('[name="phone"]')) {
@@ -38,6 +53,18 @@ $(document).ready(function () {
     }
     const mask = IMask(element, maskOptions)
   }
+
+  const eye = document.querySelectorAll('.office__edit-eye')
+  eye?.forEach((elem) => {
+    elem.addEventListener('click', function () {
+      const entryInputEl = elem?.previousElementSibling
+      if (entryInputEl.type === 'password') {
+        entryInputEl.type = 'text'
+      } else {
+        entryInputEl.type = 'password'
+      }
+    })
+  })
 
   const formIcon = document.querySelectorAll('.form__icon')
 
@@ -54,49 +81,121 @@ $(document).ready(function () {
     })
   })
 
-  const tabs = document.querySelectorAll('.tab__target')
-  const pages = document.querySelectorAll('.tab__info')
+  function handleTabClick(tabs, pages, activeTabClass, activePageClass, opacityPageClass) {
+    tabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((tab) => tab.classList.remove(activeTabClass))
+        pages.forEach((page) => {
+          page.classList.remove(activePageClass)
+          page.classList.remove(opacityPageClass)
+        })
 
-  // function tabs(target, info) {
-  //   target?.forEach((tab, idx) => {
-  //     tab.addEventListener('click', () => {
-  //       target.forEach((tab) => tab.classList.remove('tab__target--active'))
-  //       info.forEach((page) => {
-  //         page.classList.remove('tab__info--active')
-  //         setTimeout(() => {
-  //           page.classList.remove('tab__info--opacity')
-  //         }, 380)
-  //       })
+        tab.classList.add(activeTabClass)
+        pages[idx].classList.add(activePageClass)
 
-  //       tab.classList.add('tab__target--active')
-  //       info[idx].classList.add('tab__info--active')
-
-  //       setTimeout(() => {
-  //         info[idx].classList.add('tab__info--opacity')
-  //       }, 380)
-  //     })
-  //   })
-  // }
-  // tabs(tab, pages)
-
-  tabs?.forEach((tab, idx) => {
-    tab.addEventListener('click', () => {
-      tabs.forEach((tab) => tab.classList.remove('tab__target--active'))
-      pages.forEach((page) => {
-        page.classList.remove('tab__info--active')
         setTimeout(() => {
-          page.classList.remove('tab__info--opacity')
+          pages[idx].classList.add(opacityPageClass)
         }, 380)
       })
+    })
+  }
 
-      tab.classList.add('tab__target--active')
-      pages[idx].classList.add('tab__info--active')
+  const tabs = document.querySelectorAll('.tab__target')
+  const pages = document.querySelectorAll('.tab__info')
+  const tabsAlt = document.querySelectorAll('.tab__targetAlt')
+  const pagesAlt = document.querySelectorAll('.tab__infoAlt')
 
-      setTimeout(() => {
-        pages[idx].classList.add('tab__info--opacity')
-      }, 380)
+  handleTabClick(tabs, pages, 'tab__target--active', 'tab__info--active', 'tab__info--opacity')
+  handleTabClick(tabsAlt, pagesAlt, 'tab__targetAlt--active', 'tab__infoAlt--active', 'tab__infoAlt--opacity')
+
+  // const tabs = document.querySelectorAll('.tab__target')
+  // const pages = document.querySelectorAll('.tab__info')
+  // const tabsAlt = document.querySelectorAll('.tab__targetAlt')
+  // const pagesAlt = document.querySelectorAll('.tab__infoAlt')
+
+  // tabs?.forEach((tab, idx) => {
+  //   tab.addEventListener('click', () => {
+  //     tabs.forEach((tab) => tab.classList.remove('tab__target--active'))
+  //     pages.forEach((page) => {
+  //       page.classList.remove('tab__info--active')
+  //       setTimeout(() => {
+  //         page.classList.remove('tab__info--opacity')
+  //       }, 380)
+  //     })
+
+  //     tab.classList.add('tab__target--active')
+  //     pages[idx].classList.add('tab__info--active')
+
+  //     setTimeout(() => {
+  //       pages[idx].classList.add('tab__info--opacity')
+  //     }, 380)
+  //   })
+  // })
+
+  // tabsAlt?.forEach((tab, idx) => {
+  //   tab.addEventListener('click', () => {
+  //     tabsAlt.forEach((tab) => tab.classList.remove('tab__targetAlt--active'))
+  //     pagesAlt.forEach((page) => {
+  //       page.classList.remove('tab__infoAlt--active')
+  //       setTimeout(() => {
+  //         page.classList.remove('tab__infoAlt--opacity')
+  //       }, 380)
+  //     })
+
+  //     tab.classList.add('tab__targetAlt--active')
+  //     pagesAlt[idx].classList.add('tab__infoAlt--active')
+
+  //     setTimeout(() => {
+  //       pagesAlt[idx].classList.add('tab__infoAlt--opacity')
+  //     }, 380)
+  //   })
+  // })
+
+  const linkEdit = document.querySelector('.office__user--linkEdit')
+  const officeItemTab = document.querySelector('.office__item--tab')
+  const officeEditBack = document.querySelectorAll('.office__edit-back')
+  const officeEditElem = document.querySelectorAll('.office__edit-elem')
+
+  const filteredElements = Array.from(officeEditElem).filter((item) => item.querySelector('.office__edit-info'))
+
+  filteredElements.forEach((item) => {
+    const info = item.querySelector('.office__edit-info')
+
+    if (info.textContent == '') {
+      info.nextElementSibling.style.display = 'none'
+    } else {
+      info.nextElementSibling.style.display = 'block'
+    }
+  })
+
+  linkEdit?.addEventListener('click', () => {
+    tabs[0].classList.add('tab__target--active')
+  })
+  officeEditBack[0]?.addEventListener('click', () => {
+    tabs[0].click()
+  })
+  officeItemTab?.addEventListener('click', () => {
+    tabs[5].classList.add('tab__target--active')
+  })
+  officeEditBack[1]?.addEventListener('click', () => {
+    tabs[5].click()
+  })
+
+  const officeItems = document.querySelectorAll('.office__item--localStorage')
+
+  officeItems?.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+      localStorage.setItem('selectedOfficeItem', index)
     })
   })
+
+  const targetItems = document.querySelectorAll('.office__target-item')
+  const selectedOfficeItem = localStorage?.getItem('selectedOfficeItem')
+
+  if (targetItems) {
+    targetItems[selectedOfficeItem]?.click()
+    localStorage.removeItem('selectedOfficeItem')
+  }
 
   const card = document.querySelectorAll('.news__card')
   const newsItem = document.querySelectorAll('.newsItem')
@@ -119,6 +218,13 @@ $(document).ready(function () {
       el.id = `calendarItem-${i + 1}`
     })
 
+    el.addEventListener('click', () => {
+      Fancybox.close()
+    })
+  })
+
+  const officeModalLink = document.querySelectorAll('.office__modal-link')
+  officeModalLink?.forEach((el) => {
     el.addEventListener('click', () => {
       Fancybox.close()
     })
@@ -214,85 +320,156 @@ $(document).ready(function () {
     })
   })
 
-  var points = [[]]
+  const allSwipers = []
+  const businessCardHolderSwiper = document.querySelectorAll('.office__businessCardHolder-swiper')
+  businessCardHolderSwiper.forEach((swiper, index) => {
+    allSwipers.push(setSwiper(index + 1))
+  })
+
+  function setSwiper(index) {
+    return new Swiper(`.office__businessCardHolder-swiper--${index}`, {
+      pagination: {
+        el: `.office__businessCardHolder-pagination--${index}`,
+        clickable: true,
+      },
+    })
+  }
 
   if (document.querySelector('.map')) {
     ymaps?.ready(function () {
       var myCollection = new ymaps.GeoObjectCollection()
 
-      myMap = new ymaps.Map('mapYandex', {
-        center: [39.7801686722157, -89.64920503007116],
-        zoom: 11,
-        // controls: ['zoomControl', 'geolocationControl', 'trafficControl'],
-        controls: [],
-      })
+      if (document.querySelector('#mapYandex')) {
+        var points = [[]]
+        myMap = new ymaps.Map('mapYandex', {
+          center: [39.7801686722157, -89.64920503007116],
+          zoom: 11,
+          // controls: ['zoomControl', 'geolocationControl', 'trafficControl'],
+          controls: [],
+        })
 
-      if (window.innerWidth < 1024) {
-        myMap.behaviors.disable('scrollZoom')
-        myMap.behaviors.disable('drag')
+        if (window.innerWidth < 1024) {
+          myMap.behaviors.disable('scrollZoom')
+          myMap.behaviors.disable('drag')
+        }
+
+        for (i = 0; i < points.length; i++) {
+          var myPlacemark = new ymaps.Placemark(
+            [points[i][1], points[i][2]],
+            {
+              balloonContent: points[i][0],
+            },
+            {
+              iconLayout: 'default#image',
+              balloonLayout: 'default#imageWithContent',
+            }
+          )
+          // myCollection.add(myPlacemark)
+          // myMap.geoObjects.add(myPlacemark)
+
+          // myMap.events.add('click', function (e) {
+          //   myMap.balloon.close()
+          // })
+        }
+
+        myMap.geoObjects.add(myCollection)
+
+        myPlacemark.events.add('click', function (event) {
+          event.preventDefault()
+        })
       }
 
-      for (i = 0; i < points.length; i++) {
-        var myPlacemark = new ymaps.Placemark(
-          [points[i][1], points[i][2]],
-          {
-            balloonContent: points[i][0],
-          },
-          {
-            iconLayout: 'default#image',
-            balloonLayout: 'default#imageWithContent',
-          }
-        )
-        // myCollection.add(myPlacemark)
-        // myMap.geoObjects.add(myPlacemark)
+      if (document.querySelector('#mapYandexBig')) {
+        var points = [
+          ['<div class="map-baloon"><p></p></div>', '38.999513', '-77.036536'],
+          ['<div class="map-baloon"><p></p></div>', '38.899513', '-77.136536'],
+          ['<div class="map-baloon"><p></p></div>', '38.799513', '-77.236536'],
+          ['<div class="map-baloon"><p></p></div>', '38.699513', '-77.336536'],
+          ['<div class="map-baloon"><p></p></div>', '38.999513', '-76.636536'],
+          ['<div class="map-baloon"><p></p></div>', '38.899513', '-76.736536'],
+          ['<div class="map-baloon"><p></p></div>', '38.799513', '-76.836536'],
+          ['<div class="map-baloon"><p></p></div>', '38.699513', '-76.936536'],
+        ]
+        myMapBig = new ymaps.Map('mapYandexBig', {
+          center: [38.899513, -77.036536],
+          zoom: 13,
+          // controls: ['zoomControl', 'geolocationControl', 'trafficControl'],
+          controls: [],
+        })
 
-        // myMap.events.add('click', function (e) {
-        //   myMap.balloon.close()
-        // })
+        if (window.innerWidth < 1024) {
+          myMapBig.behaviors.disable('scrollZoom')
+          myMapBig.behaviors.disable('drag')
+        }
+
+        for (i = 0; i < points.length; i++) {
+          var myPlacemark = new ymaps.Placemark(
+            [points[i][1], points[i][2]],
+            {
+              balloonContent: points[i][0],
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: '../assets/images/icons/location.svg',
+              balloonLayout: '../assets/images/icons/location.svg',
+            }
+          )
+          myCollection.add(myPlacemark)
+          // myMapBig.geoObjects.add(myPlacemark)
+
+          // myMapBig.events.add('click', function (e) {
+          //   myMapBig.balloon.close()
+          // })
+        }
+
+        myMapBig.geoObjects.add(myCollection)
+
+        myPlacemark.events.add('click', function (event) {
+          event.preventDefault()
+        })
       }
 
-      myMap.geoObjects.add(myCollection)
+      if (document.querySelector('#mapYandexOffice')) {
+        var points = [['<div class="map-baloon"><p>Москва, улица Строителей</p></div>', '38.899513', '-77.036536']]
 
-      myPlacemark.events.add('click', function (event) {
-        event.preventDefault()
-      })
+        myMapBig = new ymaps.Map('mapYandexOffice', {
+          center: [38.899513, -77.036536],
+          zoom: 13,
+          // controls: ['zoomControl', 'geolocationControl', 'trafficControl'],
+          controls: [],
+        })
 
-      myMapBig = new ymaps.Map('mapYandexBig', {
-        center: [38.899513, -77.036536],
-        zoom: 13,
-        // controls: ['zoomControl', 'geolocationControl', 'trafficControl'],
-        controls: [],
-      })
+        if (window.innerWidth < 1024) {
+          myMapBig.behaviors.disable('scrollZoom')
+          myMapBig.behaviors.disable('drag')
+        }
 
-      if (window.innerWidth < 1024) {
-        myMapBig.behaviors.disable('scrollZoom')
-        myMapBig.behaviors.disable('drag')
+        for (i = 0; i < points.length; i++) {
+          var myPlacemark = new ymaps.Placemark(
+            [points[i][1], points[i][2]],
+            {
+              balloonContent: points[i][0],
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: '../assets/images/icons/location.svg',
+              balloonLayout: '../assets/images/icons/location.svg',
+            }
+          )
+          myCollection.add(myPlacemark)
+          myMapBig.geoObjects.add(myPlacemark)
+
+          myMapBig.events.add('click', function (e) {
+            myMapBig.balloon.close()
+          })
+        }
+
+        myMapBig.geoObjects.add(myCollection)
+
+        myPlacemark.events.add('click', function (event) {
+          event.preventDefault()
+        })
       }
-
-      for (i = 0; i < points.length; i++) {
-        var myPlacemark = new ymaps.Placemark(
-          [points[i][1], points[i][2]],
-          {
-            balloonContent: points[i][0],
-          },
-          {
-            iconLayout: 'default#image',
-            balloonLayout: 'default#imageWithContent',
-          }
-        )
-        // myCollection.add(myPlacemark)
-        // myMapBig.geoObjects.add(myPlacemark)
-
-        // myMapBig.events.add('click', function (e) {
-        //   myMapBig.balloon.close()
-        // })
-      }
-
-      myMapBig.geoObjects.add(myCollection)
-
-      myPlacemark.events.add('click', function (event) {
-        event.preventDefault()
-      })
     })
   }
 })

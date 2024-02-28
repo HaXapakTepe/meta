@@ -8,9 +8,10 @@
   <link rel="shortcut icon" href="./assets/images/favicon.svg" type="x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./styles/css/normalize.css">
   <link rel="stylesheet" href="./styles/css/style.css?v=0.0001">
-  <title>Моя визитка</title>
+  <title>Мой офис</title>
 </head>
 
 <body>
@@ -29,6 +30,28 @@
               Мой офис
             </h2>
             <div class="office__box office__box--alt">
+              <a class="back" href="/office.html">
+                <i class="back__icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_b_50_2512)">
+                      <rect width="40" height="40" rx="20" fill="black" fill-opacity="0.35" />
+                      <path
+                        d="M21.5355 15.2929C21.9261 15.6834 21.9261 16.3166 21.5355 16.7071L18.4142 19.8284L21.5355 22.9497C21.9261 23.3403 21.9261 23.9734 21.5355 24.364C21.145 24.7545 20.5118 24.7545 20.1213 24.364L16.2929 20.5355C15.9024 20.145 15.9024 19.5118 16.2929 19.1213L20.1213 15.2929C20.5118 14.9024 21.145 14.9024 21.5355 15.2929Z"
+                        fill="white" fill-opacity="0.5" />
+                    </g>
+                    <defs>
+                      <filter id="filter0_b_50_2512" x="-20" y="-20" width="80" height="80" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="10" />
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_50_2512" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_50_2512" result="shape" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </i>
+                Назад
+              </a>
               <a class="link link--black link--big" data-fancybox href="#notifications">
                 Уведомления
                 <span class="link__num">
@@ -40,7 +63,7 @@
             <div class="office__tab tab">
               <div class="office__tab-box">
                 <div class="office__target">
-                  <div class="office__target-item tab__target tab__target--active link link--blackAlt link--big">
+                  <div class="office__target-item tab__target link link--blackAlt link--big">
                     <i class="office__target-icon">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -182,7 +205,7 @@
                           mail@mail.ru
                         </a>
                       </div>
-                      <div class="office__user-link link link--bigGreen tab__target">
+                      <div class="office__user-link office__user--linkEdit link link--big tab__target">
                         Редактировать
                       </div>
                     </div>
@@ -190,50 +213,2553 @@
                 </div>
               </div>
               <div class="tab__info">
-                2
+                <div class="office__businessCardHolder">
+                  <div class="office__businessCardHolder-top">
+                    <div class="office__businessCardHolder-elem office__businessCardHolder-elem--flex">
+                      <i class="office__businessCardHolder-icon">
+                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="52" height="52" rx="26" fill="black" fill-opacity="0.35" />
+                          <path
+                            d="M33 16.9H32V15.9C32 15.3 31.6 14.9 31 14.9C30.4 14.9 30 15.3 30 15.9V16.9H22V15.9C22 15.3 21.6 14.9 21 14.9C20.4 14.9 20 15.3 20 15.9V16.9H19C17.3 16.9 16 18.2 16 19.9V33.9C16 35.6 17.3 36.9 19 36.9H33C34.7 36.9 36 35.6 36 33.9V19.9C36 18.3 34.7 16.9 33 16.9ZM21 32.9C20.4 32.9 20 32.5 20 31.9C20 31.3 20.4 30.9 21 30.9C21.6 30.9 22 31.3 22 31.9C22 32.5 21.6 32.9 21 32.9ZM21 28.9C20.4 28.9 20 28.5 20 27.9C20 27.3 20.4 26.9 21 26.9C21.6 26.9 22 27.3 22 27.9C22 28.5 21.6 28.9 21 28.9ZM26 32.9C25.4 32.9 25 32.5 25 31.9C25 31.3 25.4 30.9 26 30.9C26.6 30.9 27 31.3 27 31.9C27 32.5 26.6 32.9 26 32.9ZM26 28.9C25.4 28.9 25 28.5 25 27.9C25 27.3 25.4 26.9 26 26.9C26.6 26.9 27 27.3 27 27.9C27 28.5 26.6 28.9 26 28.9ZM31 32.9C30.4 32.9 30 32.5 30 31.9C30 31.3 30.4 30.9 31 30.9C31.6 30.9 32 31.3 32 31.9C32 32.5 31.6 32.9 31 32.9ZM31 28.9C30.4 28.9 30 28.5 30 27.9C30 27.3 30.4 26.9 31 26.9C31.6 26.9 32 27.3 32 27.9C32 28.5 31.6 28.9 31 28.9ZM34 22.9H18V19.9C18 19.3 18.4 18.9 19 18.9H20V19.9C20 20.5 20.4 20.9 21 20.9C21.6 20.9 22 20.5 22 19.9V18.9H30V19.9C30 20.5 30.4 20.9 31 20.9C31.6 20.9 32 20.5 32 19.9V18.9H33C33.6 18.9 34 19.3 34 19.9V22.9Z"
+                            fill="white" fill-opacity="0.5" />
+                        </svg>
+                      </i>
+                      <div class="office__businessCardHolder-column">
+                        <p class="office__businessCardHolder-subtitle">
+                          Сортировка
+                        </p>
+                        <div class="office__businessCardHolder-select">
+                          <select class="office__businessCardHolder-sorting" name="businessCardHolderSorting">
+                            <option value=""></option>
+                            <option value="1">По дате добавления (сначала новые)</option>
+                            <option value="2">По дате добавления (сначала старые)</option>
+                            <option value="1">По дате добавления (сначала новые)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-elem">
+                      <p class="office__businessCardHolder-subtitle">
+                        Поиск
+                      </p>
+                      <form class="office__businessCardHolder-box" action="">
+                        <div class="input">
+                          <input class="input__field" type="search" placeholder="Введите запрос">
+                        </div>
+                        <button class="link">
+                          Найти
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="office__businessCardHolder-block">
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--1">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--1 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--1">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--1-1">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--1-1">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--2">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--2 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--2 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--2">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--2-2">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--2-2">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--3">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--3 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--3 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--3">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--3-3">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--3-3">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--4">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--4 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--4 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--4">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--4-4">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--4-4">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--5">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--5 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--5 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--5">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--5-5">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--5-5">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--6">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--6 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--6 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--6">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--6-6">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--6-6">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--7">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--7 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--7 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--7">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--7-7">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--7-7">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--8">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--8 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--8 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--8">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--8-8">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--8-8">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--9">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--9 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--9 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--9">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--9-9">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--9-9">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="office__businessCardHolder-card" data-fancybox data-src="#officeModal--10">
+                      <div class="office__businessCardHolder-left">
+                        <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--10 swiper">
+                          <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                            <div class="swiper-slide">
+                              <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-comment">
+                          <i class="office__businessCardHolder-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M10 1C5.03579 1 1 5.03579 1 10C1 14.9642 5.03579 19 10 19C14.9642 19 19 14.9642 19 10C19 5.03579 14.9642 1 10 1ZM11.44 15.7032C11.44 15.9874 11.2126 16.2337 10.9095 16.2337H9.09053C8.80632 16.2337 8.56 16.0063 8.56 15.7032V8.90105C8.56 8.61684 8.78737 8.37053 9.09053 8.37053H10.9095C11.1937 8.37053 11.44 8.5979 11.44 8.90105V15.7032ZM10 7.29053C9.03368 7.29053 8.2379 6.49474 8.2379 5.52842C8.2379 4.56211 9.03368 3.76632 10 3.76632C10.9663 3.76632 11.7621 4.56211 11.7621 5.52842C11.7621 6.49474 10.9663 7.29053 10 7.29053Z"
+                                fill="#767c7d" fill-opacity="0.25" />
+                            </svg>
+                          </i>
+                          Комментарий
+                        </p>
+                      </div>
+                      <div class="office__businessCardHolder-right">
+                        <div class="office__businessCardHolder-bullets">
+                          <div
+                            class="office__businessCardHolder-pagination office__businessCardHolder-pagination--10 swiper-pagination">
+                          </div>
+                        </div>
+                        <p class="office__businessCardHolder-name">
+                          Иванов Иван Иванович
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Генеральный директор
+                        </p>
+                        <p class="office__businessCardHolder-org">
+                          ООО “Название организации”
+                        </p>
+                        <p class="office__businessCardHolder-who">
+                          Сфера деятельности
+                        </p>
+                        <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                        <div class="office__businessCardHolder-flex">
+                          <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                            Удалить
+                          </p>
+                          <p class="office__businessCardHolder-link">
+                            Перейти
+                            <i class="office__businessCardHolder-arrow">
+                              <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                  fill="#0D9877" fill-opacity="0.75" />
+                              </svg>
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--10">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <div class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <p class="office__modal-comment">Текст моего комментария</p>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <time class="office__modal-date" datetime=" 2024-02-11">01.02.2024</time>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <p class="office__modal-text">Выставка Финтеха</p>
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <p class="office__modal-text">Конференция финансовой грамотности</p>
+                            </div>
+                          </div>
+                          <a class="office__modal-link link link--big" data-fancybox href="#officeModal--10-10">
+                            Редактировать
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__modal" id="officeModal--10-10">
+                      <div class="office__modal-inner">
+                        <img class="office__modal-img" src="./assets/images/office/user.png" alt="">
+                        <form class="office__modal-item">
+                          <p class="office__modal-name">Иванов Иван Иванович</p>
+                          <p class="office__modal-who">Генеральный директор</p>
+                          <p class="office__modal-org">ООО “Название организации”</p>
+                          <p class="office__modal-who">Сфера деятельности</p>
+                          <div class="office__modal-box">
+                            <a class="office__modal-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <a class="office__modal-mail" href="mailto:mail@mail.ru">mail@mail.ru</a>
+                          </div>
+                          <textarea class="office__modal-textarea" rows="1"></textarea>
+                          <div class="office__modal-block">
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Дата знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Место знакомства</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                            <div class="office__modal-elem">
+                              <p class="office__modal-subtitle">Мероприятие</p>
+                              <input class="office__modal-input" type="text">
+                            </div>
+                          </div>
+                          <button class="office__modal-link link link--big">
+                            Сохранить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="tab__info">
-                3
+                <div class="office__presentations">
+                  <div class="office__presentations-top">
+                    <div class="office__presentations-elem office__presentations-elem--flex">
+                      <i class="office__presentations-icon">
+                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="52" height="52" rx="26" fill="black" fill-opacity="0.35" />
+                          <path
+                            d="M33 16.9H32V15.9C32 15.3 31.6 14.9 31 14.9C30.4 14.9 30 15.3 30 15.9V16.9H22V15.9C22 15.3 21.6 14.9 21 14.9C20.4 14.9 20 15.3 20 15.9V16.9H19C17.3 16.9 16 18.2 16 19.9V33.9C16 35.6 17.3 36.9 19 36.9H33C34.7 36.9 36 35.6 36 33.9V19.9C36 18.3 34.7 16.9 33 16.9ZM21 32.9C20.4 32.9 20 32.5 20 31.9C20 31.3 20.4 30.9 21 30.9C21.6 30.9 22 31.3 22 31.9C22 32.5 21.6 32.9 21 32.9ZM21 28.9C20.4 28.9 20 28.5 20 27.9C20 27.3 20.4 26.9 21 26.9C21.6 26.9 22 27.3 22 27.9C22 28.5 21.6 28.9 21 28.9ZM26 32.9C25.4 32.9 25 32.5 25 31.9C25 31.3 25.4 30.9 26 30.9C26.6 30.9 27 31.3 27 31.9C27 32.5 26.6 32.9 26 32.9ZM26 28.9C25.4 28.9 25 28.5 25 27.9C25 27.3 25.4 26.9 26 26.9C26.6 26.9 27 27.3 27 27.9C27 28.5 26.6 28.9 26 28.9ZM31 32.9C30.4 32.9 30 32.5 30 31.9C30 31.3 30.4 30.9 31 30.9C31.6 30.9 32 31.3 32 31.9C32 32.5 31.6 32.9 31 32.9ZM31 28.9C30.4 28.9 30 28.5 30 27.9C30 27.3 30.4 26.9 31 26.9C31.6 26.9 32 27.3 32 27.9C32 28.5 31.6 28.9 31 28.9ZM34 22.9H18V19.9C18 19.3 18.4 18.9 19 18.9H20V19.9C20 20.5 20.4 20.9 21 20.9C21.6 20.9 22 20.5 22 19.9V18.9H30V19.9C30 20.5 30.4 20.9 31 20.9C31.6 20.9 32 20.5 32 19.9V18.9H33C33.6 18.9 34 19.3 34 19.9V22.9Z"
+                            fill="white" fill-opacity="0.5" />
+                        </svg>
+                      </i>
+                      <div class="office__presentations-column">
+                        <p class="office__presentations-subtitle">
+                          Сортировка
+                        </p>
+                        <div class="office__presentations-select">
+                          <select class="office__presentations-sorting" name="presentationsSorting">
+                            <option value=""></option>
+                            <option value="1">По дате добавления (сначала новые)</option>
+                            <option value="2">По дате добавления (сначала старые)</option>
+                            <option value="1">По дате добавления (сначала новые)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="office__presentations-elem">
+                      <p class="office__presentations-subtitle">
+                        Поиск
+                      </p>
+                      <form class="office__presentations-box" action="">
+                        <div class="input">
+                          <input class="input__field" type="search" placeholder="Введите запрос">
+                        </div>
+                        <button class="link">
+                          Найти
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="office__presentations-block">
+                    <div class="office__presentations-card">
+                      <img class="office__presentations-img" src="./assets/images/metro/2.png" alt="">
+                      <p class="office__presentations-title">Презентация с виртуального стенда</p>
+                      <p class="office__presentations-info">МБ-45AS</p>
+                      <p class="office__presentations-org">ООО “Название организации”</p>
+                      <p class="office__presentations-info">Сфера деятельности</p>
+                      <time class="office__presentations-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                      <div class="office__presentations-flex">
+                        <p class="office__presentations-link office__presentations-link--delete">
+                          Удалить
+                        </p>
+                        <a class="office__presentations-link" href="#" download>
+                          Скачать
+                          <i class="office__presentations-arrow">
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                fill="#0D9877" fill-opacity="0.75" />
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="office__presentations-card">
+                      <img class="office__presentations-img" src="./assets/images/metro/2.png" alt="">
+                      <p class="office__presentations-title">Презентация с виртуального стенда</p>
+                      <p class="office__presentations-info">МБ-45AS</p>
+                      <p class="office__presentations-org">ООО “Название организации”</p>
+                      <p class="office__presentations-info">Сфера деятельности</p>
+                      <time class="office__presentations-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                      <div class="office__presentations-flex">
+                        <p class="office__presentations-link office__presentations-link--delete">
+                          Удалить
+                        </p>
+                        <a class="office__presentations-link" href="#" download>
+                          Скачать
+                          <i class="office__presentations-arrow">
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                fill="#0D9877" fill-opacity="0.75" />
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="office__presentations-card">
+                      <img class="office__presentations-img" src="./assets/images/metro/2.png" alt="">
+                      <p class="office__presentations-title">Презентация с виртуального стенда</p>
+                      <p class="office__presentations-info">МБ-45AS</p>
+                      <p class="office__presentations-org">ООО “Название организации”</p>
+                      <p class="office__presentations-info">Сфера деятельности</p>
+                      <time class="office__presentations-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                      <div class="office__presentations-flex">
+                        <p class="office__presentations-link office__presentations-link--delete">
+                          Удалить
+                        </p>
+                        <a class="office__presentations-link" href="#" download>
+                          Скачать
+                          <i class="office__presentations-arrow">
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                fill="#0D9877" fill-opacity="0.75" />
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="office__presentations-card">
+                      <img class="office__presentations-img" src="./assets/images/metro/2.png" alt="">
+                      <p class="office__presentations-title">Презентация с виртуального стенда</p>
+                      <p class="office__presentations-info">МБ-45AS</p>
+                      <p class="office__presentations-org">ООО “Название организации”</p>
+                      <p class="office__presentations-info">Сфера деятельности</p>
+                      <time class="office__presentations-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                      <div class="office__presentations-flex">
+                        <p class="office__presentations-link office__presentations-link--delete">
+                          Удалить
+                        </p>
+                        <a class="office__presentations-link" href="#" download>
+                          Скачать
+                          <i class="office__presentations-arrow">
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                fill="#0D9877" fill-opacity="0.75" />
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="office__presentations-card">
+                      <img class="office__presentations-img" src="./assets/images/metro/2.png" alt="">
+                      <p class="office__presentations-title">Презентация с виртуального стенда</p>
+                      <p class="office__presentations-info">МБ-45AS</p>
+                      <p class="office__presentations-org">ООО “Название организации”</p>
+                      <p class="office__presentations-info">Сфера деятельности</p>
+                      <time class="office__presentations-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                      <div class="office__presentations-flex">
+                        <p class="office__presentations-link office__presentations-link--delete">
+                          Удалить
+                        </p>
+                        <a class="office__presentations-link" href="#" download>
+                          Скачать
+                          <i class="office__presentations-arrow">
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                fill="#0D9877" fill-opacity="0.75" />
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="office__presentations-card">
+                      <img class="office__presentations-img" src="./assets/images/metro/2.png" alt="">
+                      <p class="office__presentations-title">Презентация с виртуального стенда</p>
+                      <p class="office__presentations-info">МБ-45AS</p>
+                      <p class="office__presentations-org">ООО “Название организации”</p>
+                      <p class="office__presentations-info">Сфера деятельности</p>
+                      <time class="office__presentations-date" datetime="2024-02-11">Добавлено 11.02.2024</time>
+                      <div class="office__presentations-flex">
+                        <p class="office__presentations-link office__presentations-link--delete">
+                          Удалить
+                        </p>
+                        <a class="office__presentations-link" href="#" download>
+                          Скачать
+                          <i class="office__presentations-arrow">
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                fill="#0D9877" fill-opacity="0.75" />
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="tab__info">
-                4
+                Мой календарь
               </div>
               <div class="tab__info">
-                5
+                Сообщения
               </div>
               <div class="tab__info">
-                6
+                <div class="office__stand">
+                  <div class="office__stand-top">
+                    <p class="office__stand-title">
+                      Мой стенд
+                    </p>
+                    <p class="office__stand-id">
+                      Stand ID: HXIU-23344
+                    </p>
+                  </div>
+                  <div class="office__stand-block">
+                    <div class="office__item office__item--tab tab__target">
+                      <div class="office__item-box">
+                        <p class="office__item-title">
+                          Редактирование контента на стенде
+                        </p>
+                      </div>
+                      <img class="office__item-img" src="./assets/images/office/10.png" alt="">
+                    </div>
+                    <div class="office__item office__item--tab tab__target">
+                      <div class="office__item-box">
+                        <p class="office__item-title">
+                          <!-- Аналитика -->
+                          Контакты со стенда
+                        </p>
+                      </div>
+                      <img class="office__item-img" src="./assets/images/office/11.png" alt="">
+                    </div>
+                    <a class="office__item" href="#">
+                      <div class="office__item-box">
+                        <p class="office__item-title">
+                          Входящие запросы
+                        </p>
+                      </div>
+                      <img class="office__item-img" src="./assets/images/office/12.png" alt="">
+                    </a>
+                    <a class="office__item" href="#">
+                      <div class="office__item-box">
+                        <p class="office__item-title">
+                          Техническая поддержка
+                        </p>
+                      </div>
+                      <img class="office__item-img" src="./assets/images/office/13.png" alt="">
+                    </a>
+                    <a class="office__item" href="#">
+                      <div class="office__item-box">
+                        <p class="office__item-title">
+                          Аналитика
+                        </p>
+                      </div>
+                      <img class="office__item-img" src="./assets/images/office/11.png" alt="">
+                    </a>
+                    <a class="office__item" href="#">
+                      <div class="office__item-box">
+                        <p class="office__item-title">
+                          Входящие запросы
+                        </p>
+                      </div>
+                      <img class="office__item-img" src="./assets/images/office/12.png" alt="">
+                    </a>
+                    <a class="office__item" href="#">
+                      <div class="office__item-box">
+                        <p class="office__item-title">
+                          Техническая поддержка
+                        </p>
+                      </div>
+                      <img class="office__item-img" src="./assets/images/office/13.png" alt="">
+                    </a>
+                  </div>
+                  <a class="office__stand-link link link--big" href="#">Перейти в CRM</a>
+                </div>
               </div>
               <div class="tab__info">
                 <div class="office__edit">
-                  <div class="office__edit-left">
+                  <div class="office__edit-top">
                     <p class="office__edit-title">
                       Моя визитка
                     </p>
-                    <a class="office__edit-back" href="#">
-                      <i class="office__edit-arrow">
-                        <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.79899 7.28769C4.067 7.00461 4.067 6.54564 3.79899 6.26256L1.65685 4L3.79899 1.73744C4.067 1.45436 4.067 0.995391 3.79899 0.71231C3.53098 0.42923 3.09644 0.42923 2.82843 0.71231L0.20101 3.48744C-0.0670033 3.77052 -0.0670028 4.22948 0.20101 4.51256L2.82843 7.28769C3.09644 7.57077 3.53098 7.57077 3.79899 7.28769Z"
-                            fill="#808080" />
-                        </svg>
-                      </i>
-                      Назад
-                    </a>
-                    <p class="office__edit-what">
-                      Фото
-                    </p>
-                  </div>
-                  <div class="office__edit-box">
-                    <p class="office__edit-subtitle">
+                    <p class="office__edit-subtitle office__edit-subtitle--line">
                       Редактировать визитку
                     </p>
-                    <div class="office__edit-flex">
-
+                  </div>
+                  <div class="office__edit-block">
+                    <div class="office__edit-left">
+                      <a class="office__edit-back" href="#">
+                        <i class="office__edit-arrow">
+                          <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M3.79899 7.28769C4.067 7.00461 4.067 6.54564 3.79899 6.26256L1.65685 4L3.79899 1.73744C4.067 1.45436 4.067 0.995391 3.79899 0.71231C3.53098 0.42923 3.09644 0.42923 2.82843 0.71231L0.20101 3.48744C-0.0670033 3.77052 -0.0670028 4.22948 0.20101 4.51256L2.82843 7.28769C3.09644 7.57077 3.53098 7.57077 3.79899 7.28769Z"
+                              fill="#808080" />
+                          </svg>
+                        </i>
+                        Назад
+                      </a>
+                      <p class="office__edit-what">
+                        Фото
+                      </p>
+                    </div>
+                    <div class="office__edit-box">
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <img class="office__edit-img" src="./assets/images/office/user.png" alt="">
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
                     </div>
                   </div>
-                  <div class="office__edit-right">
-
+                  <form class="office__edit-form" action="" method="post" enctype="multipart/form-data">
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Фамилия</p>
+                      <input class="office__edit-input" type="text">
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Имя</p>
+                      <input class="office__edit-input" type="text">
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Отчество</p>
+                      <input class="office__edit-input" type="text">
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Телефон</p>
+                      <input class="office__edit-input" type="text">
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">E-mail</p>
+                      <input class="office__edit-input" type="email">
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Новый пароль</p>
+                      <label class="office__edit-label">
+                        <input class="office__edit-input" type="password">
+                        <i class="office__edit-eye">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1953_127665)">
+                              <path
+                                d="M0.832031 9.99992C0.832031 9.99992 4.16536 3.33325 9.9987 3.33325C15.832 3.33325 19.1654 9.99992 19.1654 9.99992C19.1654 9.99992 15.832 16.6666 9.9987 16.6666C4.16536 16.6666 0.832031 9.99992 0.832031 9.99992Z"
+                                stroke="#667085" stroke-width="1.66667" stroke-linecap="round" />
+                              <path
+                                d="M9.9987 12.4999C11.3794 12.4999 12.4987 11.3806 12.4987 9.99992C12.4987 8.61921 11.3794 7.49992 9.9987 7.49992C8.61799 7.49992 7.4987 8.61921 7.4987 9.99992C7.4987 11.3806 8.61799 12.4999 9.9987 12.4999Z"
+                                stroke="#667085" stroke-width="1.66667" stroke-linecap="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1953_127665">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1953_10914)">
+                              <path
+                                d="M8.2487 3.53325C8.82231 3.39898 9.40958 3.33187 9.9987 3.33325C15.832 3.33325 19.1654 9.99992 19.1654 9.99992C18.6595 10.9463 18.0562 11.8372 17.3654 12.6582M11.7654 11.7666C11.5365 12.0122 11.2605 12.2092 10.9538 12.3459C10.6472 12.4825 10.3161 12.556 9.98044 12.5619C9.64476 12.5678 9.31133 12.5061 9.00004 12.3803C8.68874 12.2546 8.40597 12.0674 8.16857 11.83C7.93117 11.5926 7.74402 11.3099 7.61829 10.9986C7.49255 10.6873 7.4308 10.3539 7.43673 10.0182C7.44265 9.6825 7.51612 9.35146 7.65276 9.04479C7.7894 8.73813 7.98641 8.46212 8.23203 8.23325M0.832031 0.833252L19.1654 19.1666M14.9487 14.9499C13.5242 16.0358 11.7896 16.6373 9.9987 16.6666C4.16536 16.6666 0.832031 9.99992 0.832031 9.99992C1.86861 8.06816 3.30631 6.38042 5.0487 5.04992L14.9487 14.9499Z"
+                                stroke="#667085" stroke-width="1.66667" stroke-linecap="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1953_10914">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </i>
+                      </label>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Повторите пароль</p>
+                      <label class="office__edit-label">
+                        <input class="office__edit-input" type="password">
+                        <i class="office__edit-eye">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1953_127665)">
+                              <path
+                                d="M0.832031 9.99992C0.832031 9.99992 4.16536 3.33325 9.9987 3.33325C15.832 3.33325 19.1654 9.99992 19.1654 9.99992C19.1654 9.99992 15.832 16.6666 9.9987 16.6666C4.16536 16.6666 0.832031 9.99992 0.832031 9.99992Z"
+                                stroke="#667085" stroke-width="1.66667" stroke-linecap="round" />
+                              <path
+                                d="M9.9987 12.4999C11.3794 12.4999 12.4987 11.3806 12.4987 9.99992C12.4987 8.61921 11.3794 7.49992 9.9987 7.49992C8.61799 7.49992 7.4987 8.61921 7.4987 9.99992C7.4987 11.3806 8.61799 12.4999 9.9987 12.4999Z"
+                                stroke="#667085" stroke-width="1.66667" stroke-linecap="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1953_127665">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1953_10914)">
+                              <path
+                                d="M8.2487 3.53325C8.82231 3.39898 9.40958 3.33187 9.9987 3.33325C15.832 3.33325 19.1654 9.99992 19.1654 9.99992C18.6595 10.9463 18.0562 11.8372 17.3654 12.6582M11.7654 11.7666C11.5365 12.0122 11.2605 12.2092 10.9538 12.3459C10.6472 12.4825 10.3161 12.556 9.98044 12.5619C9.64476 12.5678 9.31133 12.5061 9.00004 12.3803C8.68874 12.2546 8.40597 12.0674 8.16857 11.83C7.93117 11.5926 7.74402 11.3099 7.61829 10.9986C7.49255 10.6873 7.4308 10.3539 7.43673 10.0182C7.44265 9.6825 7.51612 9.35146 7.65276 9.04479C7.7894 8.73813 7.98641 8.46212 8.23203 8.23325M0.832031 0.833252L19.1654 19.1666M14.9487 14.9499C13.5242 16.0358 11.7896 16.6373 9.9987 16.6666C4.16536 16.6666 0.832031 9.99992 0.832031 9.99992C1.86861 8.06816 3.30631 6.38042 5.0487 5.04992L14.9487 14.9499Z"
+                                stroke="#667085" stroke-width="1.66667" stroke-linecap="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1953_10914">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </i>
+                      </label>
+                    </div>
+                    <p class="office__edit-subtitle">
+                      Информация о организации
+                    </p>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Название</p>
+                      <input class="office__edit-input" type="text">
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Сфера деятельности</p>
+                      <div class="office__edit-select">
+                        <select class="office__edit-activity" name="activity">
+                          <option value=""></option>
+                          <option value="1">сфера деятельности1</option>
+                          <option value="2">сфера деятельности2</option>
+                          <option value="3">сфера деятельности3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Должность</p>
+                      <input class="office__edit-input" type="text">
+                    </div>
+                    <div class="office__edit-elem office__edit-elem--mt">
+                      <button class="office__edit-link link">Сохранить изменения</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="tab__info">
+                <div class="office__edit">
+                  <div class="office__edit-top">
+                    <p class="office__edit-title">
+                      Мой стенд
+                    </p>
+                    <p class="office__edit-subtitle office__edit-subtitle--line">
+                      Редактирование контента на стенде
+                    </p>
+                  </div>
+                  <div class="office__edit-block">
+                    <div class="office__edit-left">
+                      <a class="office__edit-back office__edit-back--mb" href="#">
+                        <i class="office__edit-arrow">
+                          <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M3.79899 7.28769C4.067 7.00461 4.067 6.54564 3.79899 6.26256L1.65685 4L3.79899 1.73744C4.067 1.45436 4.067 0.995391 3.79899 0.71231C3.53098 0.42923 3.09644 0.42923 2.82843 0.71231L0.20101 3.48744C-0.0670033 3.77052 -0.0670028 4.22948 0.20101 4.51256L2.82843 7.28769C3.09644 7.57077 3.53098 7.57077 3.79899 7.28769Z"
+                              fill="#808080" />
+                          </svg>
+                        </i>
+                        Назад
+                      </a>
+                      <p class="office__edit-what">
+                        Логотип
+                      </p>
+                    </div>
+                    <div class="office__edit-box">
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info">ImageLOGO.jpeg</p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                      <p class="office__edit-text">
+                        Формат: jpg, png. Размер файла до 5 мб
+                      </p>
+                    </div>
+                  </div>
+                  <div class="office__edit-form">
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Название организации</p>
+                      <input class="office__edit-input" type="text" maxlength="140">
+                    </div>
+                    <p class="office__edit-text">
+                      Максимальное количество символов - 140
+                    </p>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Уникальное торговое предложение (УТП)</p>
+                      <input class="office__edit-input" type="text" maxlength="140">
+                    </div>
+                    <p class="office__edit-text">
+                      Максимальное количество символов - 140
+                    </p>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Видео-презентация компании</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info">video-presentation.mp4</p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Видео-обращение представителя компании</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Презентация</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Оболожка презентации</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <p class="office__edit-subtitle">
+                      Графические баннеры
+                    </p>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Баннер - 1</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info">ImageLOGO.jpeg</p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Баннер - 2</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Баннер - 3</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Баннер - 4</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem office__edit-elem--start office__edit-elem--map">
+                      <p class="office__edit-what">Укажите геолокацию компании</p>
+                      <div class="office__edit-map">
+                        <div class="map">
+                          <div class="map__item" id="mapYandexOffice"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="office__edit-subtitle">
+                      Подробная информация о компании
+                    </p>
+                    <div class="office__edit-elem office__edit-elem--start">
+                      <p class="office__edit-what office__edit-what--mt">Текст о компании</p>
+                      <textarea class="office__edit-input" rows="7" placeholder="Введите"></textarea>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Фото</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="image/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Видео</p>
+                      <form class="office__edit-formImg" action="" method="post" enctype="multipart/form-data">
+                        <label class="office__edit-link link">
+                          Выбрать файл
+                          <input type="file" name="photo" accept="video/*">
+                        </label>
+                        <p class="office__edit-info"></p>
+                        <button class="office__edit-delete" type="submit">удалить</button>
+                      </form>
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">Телефон</p>
+                      <input class="office__edit-input" type="text">
+                    </div>
+                    <div class="office__edit-elem">
+                      <p class="office__edit-what">E-mail</p>
+                      <input class="office__edit-input" type="email">
+                    </div>
+                    <div class="office__edit-elem">
+                      <label class="form__label label">
+                        <input class="label__input check" type="checkbox">
+                        <span class="label__inputCustom"></span>
+                        <div class="label__box">
+                          Я подтверждаю что загруженные данные соответствуют законодательству РФ и требованиям/правилам
+                          Платформы
+                        </div>
+                      </label>
+                    </div>
+                    <div class="office__edit-elem office__edit-elem--mt">
+                      <button class="office__edit-link link">Сохранить изменения</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab__info">
+                <div class="office__stand">
+                  <div class="office__stand-top office__stand-top--alt">
+                    <p class="office__stand-title">
+                      Мой стенд
+                    </p>
+                    <p class="office__stand-id">
+                      Контакты со стенда
+                    </p>
+                    <a class="office__stand-link link link--big" href="#">Перейти в CRM</a>
+                  </div>
+                  <div class="office__stand-box">
+                    <div class="office__stand-target tab__targetAlt tab__targetAlt--active">Обмен визитками</div>
+                    <div class="office__stand-target tab__targetAlt">Вопросы из форм обратной связи</div>
+                    <div class="office__stand-target tab__targetAlt">Предложения</div>
+                  </div>
+                  <div class="tab__infoAlt tab__infoAlt--active tab__infoAlt--opacity">
+                    <div class="office__businessCardHolder">
+                      <div class="office__businessCardHolder-block">
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="office__businessCardHolder-card">
+                          <div class="office__businessCardHolder-left">
+                            <div class="office__businessCardHolder-swiper office__businessCardHolder-swiper--1 swiper">
+                              <div class="office__businessCardHolder-wrapper swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <img class="office__businessCardHolder-avatar" src="./assets/images/office/user.png"
+                                    alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="office__businessCardHolder-right">
+                            <p class="office__businessCardHolder-name">
+                              Иванов Иван Иванович
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Генеральный директор
+                            </p>
+                            <p class="office__businessCardHolder-org">
+                              ООО “Название организации”
+                            </p>
+                            <p class="office__businessCardHolder-who">
+                              Сфера деятельности
+                            </p>
+                            <time class="office__businessCardHolder-date" datetime="2024-02-11">Добавлено
+                              11.02.2024</time>
+                            <div class="office__businessCardHolder-flex">
+                              <p class="office__businessCardHolder-link office__businessCardHolder-link--delete">
+                                Удалить
+                              </p>
+                              <p class="office__businessCardHolder-link">
+                                Перейти
+                                <i class="office__businessCardHolder-arrow">
+                                  <svg width="4" height="8" viewBox="0 0 4 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.201011 7.28769C-0.0670028 7.00461 -0.0670024 6.54564 0.201011 6.26256L2.34315 4L0.20101 1.73744C-0.0670028 1.45436 -0.0670033 0.995391 0.20101 0.71231C0.469024 0.42923 0.90356 0.42923 1.17157 0.71231L3.79899 3.48744C4.067 3.77052 4.067 4.22948 3.79899 4.51256L1.17157 7.28769C0.90356 7.57077 0.469025 7.57077 0.201011 7.28769Z"
+                                      fill="#0D9877" fill-opacity="0.75" />
+                                  </svg>
+                                </i>
+                              </p>
+                            </div>
+                            <div class="office__businessCardHolder-add">
+                              <i class="office__businessCardHolder-plus">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M4.76923 3.23077H7.23077C7.69231 3.23077 8 3.53846 8 4C8 4.46154 7.69231 4.76923 7.23077 4.76923H4.76923V7.23077C4.76923 7.69231 4.46154 8 4 8C3.53846 8 3.23077 7.69231 3.23077 7.23077V4.76923H0.769231C0.307692 4.76923 0 4.46154 0 4C0 3.53846 0.307692 3.23077 0.769231 3.23077H3.23077V0.769231C3.23077 0.307692 3.53846 0 4 0C4.46154 0 4.76923 0.307692 4.76923 0.769231V3.23077Z"
+                                    fill="#767C7D" />
+                                </svg>
+                              </i>
+                              Добавить в визитницу
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab__infoAlt">
+                    <p>Вопросы из форм обратной связи</p>
+                  </div>
+                  <div class="tab__infoAlt">
+                    <p>Предложения</p>
                   </div>
                 </div>
               </div>
@@ -827,6 +3353,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="./scripts/scripts.js"></script>

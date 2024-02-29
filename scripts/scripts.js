@@ -108,49 +108,6 @@ $(document).ready(function () {
   handleTabClick(tabs, pages, 'tab__target--active', 'tab__info--active', 'tab__info--opacity')
   handleTabClick(tabsAlt, pagesAlt, 'tab__targetAlt--active', 'tab__infoAlt--active', 'tab__infoAlt--opacity')
 
-  // const tabs = document.querySelectorAll('.tab__target')
-  // const pages = document.querySelectorAll('.tab__info')
-  // const tabsAlt = document.querySelectorAll('.tab__targetAlt')
-  // const pagesAlt = document.querySelectorAll('.tab__infoAlt')
-
-  // tabs?.forEach((tab, idx) => {
-  //   tab.addEventListener('click', () => {
-  //     tabs.forEach((tab) => tab.classList.remove('tab__target--active'))
-  //     pages.forEach((page) => {
-  //       page.classList.remove('tab__info--active')
-  //       setTimeout(() => {
-  //         page.classList.remove('tab__info--opacity')
-  //       }, 380)
-  //     })
-
-  //     tab.classList.add('tab__target--active')
-  //     pages[idx].classList.add('tab__info--active')
-
-  //     setTimeout(() => {
-  //       pages[idx].classList.add('tab__info--opacity')
-  //     }, 380)
-  //   })
-  // })
-
-  // tabsAlt?.forEach((tab, idx) => {
-  //   tab.addEventListener('click', () => {
-  //     tabsAlt.forEach((tab) => tab.classList.remove('tab__targetAlt--active'))
-  //     pagesAlt.forEach((page) => {
-  //       page.classList.remove('tab__infoAlt--active')
-  //       setTimeout(() => {
-  //         page.classList.remove('tab__infoAlt--opacity')
-  //       }, 380)
-  //     })
-
-  //     tab.classList.add('tab__targetAlt--active')
-  //     pagesAlt[idx].classList.add('tab__infoAlt--active')
-
-  //     setTimeout(() => {
-  //       pagesAlt[idx].classList.add('tab__infoAlt--opacity')
-  //     }, 380)
-  //   })
-  // })
-
   const officeStandItem = document.querySelectorAll('.office__stand-item')
   officeStandItem.forEach((item) => {
     item.addEventListener('click', () => {

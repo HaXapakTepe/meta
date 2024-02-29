@@ -3189,11 +3189,13 @@ body {
     flex-wrap: wrap;
     gap: 15px;
     overflow: auto;
+    justify-content: space-between;
+    padding-right: 18px;
 
     @media screen and (min-width: 600px) {
       margin-bottom: calc(60px + (126 - 60) * ((100vw - 600px) / (1920 - 600)));
       gap: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
-      max-height: calc(820px + (1050 - 820) * ((100vw - 600px) / (1920 - 600)));
+      max-height: calc(900px + (1110 - 900) * ((100vw - 600px) / (1920 - 600)));
     }
 
     &::-webkit-scrollbar {
@@ -3215,7 +3217,9 @@ body {
     }
 
     &--alt {
-      justify-content: space-between;
+      @media screen and (min-width: 600px) {
+        max-height: calc(820px + (1050 - 820) * ((100vw - 600px) / (1920 - 600)));
+      }
     }
   }
 
@@ -3266,12 +3270,17 @@ body {
     }
 
     &-box {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
 
       @media screen and (min-width: 600px) {
         margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+
+      .office__num {
+        right: 0;
       }
     }
 
@@ -5342,7 +5351,11 @@ body {
 
   .office {
     &__inner {
-      max-height: 800px;
+      max-height: 935px;
+
+      &--alt {
+        max-height: 800px;
+      }
     }
 
     &__item {

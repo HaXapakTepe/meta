@@ -2967,12 +2967,14 @@ body.no-scroll {
   flex-wrap: wrap;
   gap: 15px;
   overflow: auto;
+  justify-content: space-between;
+  padding-right: 18px;
 }
 @media screen and (min-width: 600px) {
   .office__inner {
     margin-bottom: calc(60px + 66 * (100vw - 600px) / 1320);
     gap: calc(10px + 5 * (100vw - 600px) / 1320);
-    max-height: calc(820px + 230 * (100vw - 600px) / 1320);
+    max-height: calc(900px + 210 * (100vw - 600px) / 1320);
   }
 }
 .office__inner::-webkit-scrollbar {
@@ -2990,8 +2992,10 @@ body.no-scroll {
     margin-bottom: calc(30px + 14 * (100vw - 600px) / 1320);
   }
 }
-.office__inner--alt {
-  justify-content: space-between;
+@media screen and (min-width: 600px) {
+  .office__inner--alt {
+    max-height: calc(820px + 230 * (100vw - 600px) / 1320);
+  }
 }
 .office__box {
   display: flex;
@@ -3035,6 +3039,7 @@ body.no-scroll {
   background-color: #fff;
 }
 .office__item-box {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3043,6 +3048,9 @@ body.no-scroll {
   .office__item-box {
     margin-bottom: calc(15px + 15 * (100vw - 600px) / 1320);
   }
+}
+.office__item-box .office__num {
+  right: 0;
 }
 .office__item-title {
   color: #20292a;
@@ -4795,6 +4803,9 @@ body.no-scroll {
     width: 59%;
   }
   .office__inner {
+    max-height: 935px;
+  }
+  .office__inner--alt {
     max-height: 800px;
   }
   .office__item {

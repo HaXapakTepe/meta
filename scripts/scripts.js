@@ -151,6 +151,17 @@ $(document).ready(function () {
   //   })
   // })
 
+  const officeStandItem = document.querySelectorAll('.office__stand-item')
+  officeStandItem.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (item.firstElementChild.classList.contains('accordion--active')) {
+        item.classList.add('office__stand-item--bg')
+      } else {
+        item.classList.remove('office__stand-item--bg')
+      }
+    })
+  })
+
   const linkEdit = document.querySelector('.office__user--linkEdit')
   const officeItemTab = document.querySelector('.office__item--tab')
   const officeEditBack = document.querySelectorAll('.office__edit-back')

@@ -463,6 +463,40 @@ body {
       background-image: linear-gradient(90.00deg, rgb(13, 152, 119), rgb(46, 176, 145) 119.675%);
     }
   }
+
+  &--book {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+
+    @media screen and (min-width: 600px) {
+      font-size: calc(16px + (18 - 16) * ((100vw - 600px) / (1920 - 600)));
+      padding-left: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+      padding-right: calc(30px + (60 - 30) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &::before,
+    &::after {
+      transform: skewX(-16deg);
+    }
+  }
+
+  &__book {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -o-object-fit: contain;
+    object-fit: contain;
+
+    @media screen and (min-width: 600px) {
+      left: calc(-110px + (137 - 110) * ((100vw - 600px) / (1920 - 600)));
+      width: calc(110px + (137 - 110) * ((100vw - 600px) / (1920 - 600)));
+      height: calc(60px + (80 - 60) * ((100vw - 600px) / (1920 - 600)));
+    }
+  }
 }
 
 .input {
@@ -3153,12 +3187,35 @@ body {
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 15px;
+    overflow: auto;
 
     @media screen and (min-width: 600px) {
       margin-bottom: calc(60px + (126 - 60) * ((100vw - 600px) / (1920 - 600)));
       gap: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      max-height: calc(820px + (1050 - 820) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      border-radius: 19px;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 10px;
+      border-radius: 19px;
+      background: rgb(210, 213, 214);
+    }
+
+    &:has(+.link--book) {
+      @media screen and (min-width: 600px) {
+        margin-bottom: calc(30px + (44 - 30) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &--alt {
+      justify-content: space-between;
     }
   }
 
@@ -4843,6 +4900,14 @@ body {
 
     &-link {
       margin-left: auto;
+
+      &--left {
+        margin-left: unset;
+
+        @media screen and (min-width: 600px) {
+          margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+        }
+      }
     }
 
     &-box {
@@ -4874,6 +4939,215 @@ body {
         background-color: rgb(13, 152, 119);
         color: #fff;
         border-color: rgb(13, 152, 119);
+      }
+    }
+
+    &-accordions {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 19px;
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 10px;
+        border-radius: 19px;
+        background: rgb(210, 213, 214);
+      }
+
+      @media screen and (min-width: 600px) {
+        gap: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+        max-height: calc(450px + (750 - 450) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-item {
+      width: 98%;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.75);
+      transition: background-color .23s ease-in-out;
+
+      &--bg {
+        background-color: #fff;
+      }
+    }
+
+    &-elem {
+      position: relative;
+      cursor: pointer;
+
+      @media screen and (min-width: 600px) {
+        padding-top: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+        padding-bottom: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+        padding-left: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+        padding-right: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+
+      &.accordion--active {
+        .office__stand-arrow {
+          svg {
+            transform: rotateX(-180deg);
+          }
+        }
+      }
+    }
+
+    &-date {
+      display: block;
+      color: rgb(118, 124, 125);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(12px + (14 - 12) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-subtitle {
+      color: rgb(32, 41, 42);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(14px + (16 - 14) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media screen and (min-width: 600px) {
+        right: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+
+      svg {
+        transition: transform 0.23s ease-in-out;
+      }
+    }
+
+    &-column {
+      @media screen and (min-width: 600px) {
+        padding-left: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+        padding-right: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+        padding-bottom: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-text {
+      color: rgb(32, 41, 42);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(14px + (16 - 14) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-info {
+      color: rgb(118, 124, 125);
+      line-height: 125%;
+      text-align: left;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(14px + (16 - 14) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-card {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      display: flex;
+      border-radius: 10px;
+      background: rgb(242, 242, 242);
+
+      @media screen and (min-width: 600px) {
+        gap: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+        padding: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-img {
+      border-radius: 10px;
+      -o-object-fit: cover;
+      object-fit: cover;
+
+      @media screen and (min-width: 600px) {
+        width: calc(80px + (100 - 80) * ((100vw - 600px) / (1920 - 600)));
+        height: calc(80px + (100 - 80) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-name {
+      color: rgb(32, 41, 42);
+      font-weight: 700;
+      line-height: 125%;
+      margin-bottom: 5px;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(16px + (18 - 16) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-who {
+      color: rgb(118, 124, 125);
+      line-height: 125%;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(12px + (14 - 12) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-org {
+      color: rgb(32, 41, 42);
+      line-height: 125%;
+      font-weight: 700;
+      margin-bottom: 5px;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(12px + (14 - 12) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-cardLink {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      gap: 5px;
+      font-size: 12px;
+      color: #0D9877;
+      transition: color .23s ease-in-out;
+
+      [class$="-icon"] {
+        svg {
+          path {
+            fill: #0D9877;
+          }
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(10px + (12 - 10) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-icon {
+      margin-top: calc(0px + (2 - 0) * ((100vw - 600px) / (1920 - 600)));
+
+      svg {
+        path {
+          transition: fill .23s ease-in-out;
+        }
       }
     }
   }
@@ -5067,6 +5341,10 @@ body {
   }
 
   .office {
+    &__inner {
+      max-height: 800px;
+    }
+
     &__item {
       width: 49%;
     }

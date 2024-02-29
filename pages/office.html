@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="x-icon">
+  <link rel="shortcut icon" href="../assets/images/favicon.svg" type="x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./styles/css/normalize.css">
-  <link rel="stylesheet" href="./styles/css/style.css?v=0.0001">
-  <title>Мэр города</title>
+  <link rel="stylesheet" href="../styles/css/normalize.css">
+  <link rel="stylesheet" href="../styles/css/style.css?v=0.0001">
+  <title>Мой офис</title>
 </head>
 
 <body>
@@ -24,34 +24,12 @@
 
       <section class="office">
         <div class="office__wrapper">
-          <img class="office__img" src="./assets/images/office/bg.png" alt="">
+          <img class="office__img" src="../assets/images/office/bg.png" alt="">
           <div class="container">
             <h2 class="office__title title title--alt">
-              Мэр города
+              Мой офис
             </h2>
-            <div class="office__box office__box--alt">
-              <a class="back" href="./office.html">
-                <i class="back__icon">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_b_50_2512)">
-                      <rect width="40" height="40" rx="20" fill="black" fill-opacity="0.35" />
-                      <path
-                        d="M21.5355 15.2929C21.9261 15.6834 21.9261 16.3166 21.5355 16.7071L18.4142 19.8284L21.5355 22.9497C21.9261 23.3403 21.9261 23.9734 21.5355 24.364C21.145 24.7545 20.5118 24.7545 20.1213 24.364L16.2929 20.5355C15.9024 20.145 15.9024 19.5118 16.2929 19.1213L20.1213 15.2929C20.5118 14.9024 21.145 14.9024 21.5355 15.2929Z"
-                        fill="white" fill-opacity="0.5" />
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_50_2512" x="-20" y="-20" width="80" height="80" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="10" />
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_50_2512" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_50_2512" result="shape" />
-                      </filter>
-                    </defs>
-                  </svg>
-                </i>
-                Назад
-              </a>
+            <div class="office__box">
               <a class="link link--black link--big" data-fancybox href="#notifications">
                 Уведомления
                 <span class="link__num">
@@ -60,38 +38,139 @@
               </a>
               <a class="link link--blackAlt link--big" href="/">Вернуться в город</a>
             </div>
-            <div class="office__inner office__inner--alt">
-              <a class="office__item" href="#">
+            <div class="office__inner">
+              <a class="office__item office__item--localStorage" href="/officeDetails.html">
                 <div class="office__item-box">
                   <p class="office__item-title">
-                    Органы управления институционального проекта
+                    Моя визитка
                   </p>
                 </div>
-                <img class="office__item-img" src="./assets/images/office/14.png" alt="">
+                <p class="office__item-text">
+                  Информация о вас которую видят другие посетители метавселенной
+                </p>
+                <img class="office__item-img" src="../assets/images/office/1.png" alt="">
+              </a>
+              <a class="office__item office__item--localStorage" href="/officeDetails.html">
+                <div class="office__item-box">
+                  <p class="office__item-title">
+                    Визитница
+                  </p>
+                  <p class="office__num">
+                    134
+                  </p>
+                </div>
+                <p class="office__item-text">
+                  Визитки которые вы сохранили у себя в процессе нетворкинга с другими посетителями
+                </p>
+                <img class="office__item-img" src="../assets/images/office/2.png" alt="">
+              </a>
+              <a class="office__item office__item--localStorage" href="/officeDetails.html">
+                <div class="office__item-box">
+                  <p class="office__item-title">
+                    Презентации
+                  </p>
+                  <p class="office__num">
+                    28
+                  </p>
+                </div>
+                <p class="office__item-text">
+                  Презентации которые вы сохранили у себядля дальнейшего изучения
+                </p>
+                <img class="office__item-img" src="../assets/images/office/3.png" alt="">
+              </a>
+              <a class="office__item office__item--localStorage" href="/officeDetails.html">
+                <div class="office__item-box">
+                  <p class="office__item-title">
+                    Сообщения
+                  </p>
+                  <p class="office__num">
+                    28
+                  </p>
+                </div>
+                <p class="office__item-text">
+                  Сообщения от других посетителей метавселенной
+                </p>
+                <img class="office__item-img" src="../assets/images/office/4.png" alt="">
+              </a>
+              <a class="office__item office__item--localStorage" href="/officeDetails.html">
+                <div class="office__item-box">
+                  <p class="office__item-title">
+                    Мой календарь
+                  </p>
+                </div>
+                <p class="office__item-text">
+                  Ваш календарь встреч, мероприятий и событий метавселенной
+                </p>
+                <img class="office__item-img" src="../assets/images/office/5.png" alt="">
+              </a>
+              <a class="office__item office__item--localStorage" href="/officeDetails.html">
+                <div class="office__item-box">
+                  <p class="office__item-title">
+                    Мой стенд
+                  </p>
+                </div>
+                <p class="office__item-text">
+                  Инструменты для управления виртуальным стендом на выставке
+                </p>
+                <img class="office__item-img" src="../assets/images/office/6.png" alt="">
               </a>
               <a class="office__item" href="#">
                 <div class="office__item-box">
-                  <p class="office__item-title">
-                    Партнеры институционального проекта
-                  </p>
+                  <p class="office__item-title">Достижения</p>
                 </div>
-                <img class="office__item-img" src="./assets/images/office/15.png" alt="">
+                <img class="office__item-img" src="../assets/images/office/7.png" alt="">
               </a>
               <a class="office__item" href="#">
                 <div class="office__item-box">
-                  <p class="office__item-title">
-                    Пресс-центр
-                  </p>
+                  <p class="office__item-title">История посещений</p>
                 </div>
-                <img class="office__item-img" src="./assets/images/office/16.png" alt="">
+                <img class="office__item-img" src="../assets/images/office/8.png" alt="">
+              </a>
+              <a class="office__item" href="#">
+                <div class="office__item-box">
+                  <p class="office__item-title">Избранные локации</p>
+                </div>
+                <img class="office__item-img" src="../assets/images/office/9.png" alt="">
+              </a>
+              <a class="office__item" href="#">
+                <div class="office__item-box">
+                  <p class="office__item-title">Достижения</p>
+                </div>
+                <img class="office__item-img" src="../assets/images/office/7.png" alt="">
+              </a>
+              <a class="office__item" href="#">
+                <div class="office__item-box">
+                  <p class="office__item-title">История посещений</p>
+                </div>
+                <img class="office__item-img" src="../assets/images/office/8.png" alt="">
+              </a>
+              <a class="office__item" href="#">
+                <div class="office__item-box">
+                  <p class="office__item-title">Избранные локации</p>
+                </div>
+                <img class="office__item-img" src="../assets/images/office/9.png" alt="">
+              </a>
+              <a class="office__item" href="#">
+                <div class="office__item-box">
+                  <p class="office__item-title">Достижения</p>
+                </div>
+                <img class="office__item-img" src="../assets/images/office/7.png" alt="">
+              </a>
+              <a class="office__item" href="#">
+                <div class="office__item-box">
+                  <p class="office__item-title">История посещений</p>
+                </div>
+                <img class="office__item-img" src="../assets/images/office/8.png" alt="">
+              </a>
+              <a class="office__item" href="#">
+                <div class="office__item-box">
+                  <p class="office__item-title">Избранные локации</p>
+                </div>
+                <img class="office__item-img" src="../assets/images/office/9.png" alt="">
               </a>
             </div>
-            <a class="link link--book" href="#">
-              <img class="link__book" src="./assets/images/office/book.png" alt="">
-              Книга жалоб и предложений
-            </a>
             <a class="logo" href="/">
-              <img class="logo__img" src="./assets/images/office/logo.svg" alt="">
+              <img class="logo__img" src="../assets/images/office/logo.svg" alt="">
             </a>
           </div>
         </div>
@@ -682,7 +761,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="https://unpkg.com/imask"></script>
-  <script src="./scripts/scripts.js"></script>
+  <script src="../scripts/scripts.js"></script>
 </body>
 
 </html>

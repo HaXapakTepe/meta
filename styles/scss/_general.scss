@@ -691,7 +691,7 @@ body {
       z-index: -1;
 
       @media screen and (min-width: 600px) {
-        width: calc(295px + (395 - 295) * ((100vw - 600px) / (1920 - 600)));
+        width: calc(305px + (395 - 305) * ((100vw - 600px) / (1920 - 600)));
         height: calc(123px + (143 - 123) * ((100vw - 600px) / (1920 - 600)));
       }
     }
@@ -699,10 +699,12 @@ body {
 
   &__left {
     padding: 12px 46px 14px 23px;
+    width: 100%;
 
     @media screen and (min-width: 600px) {
       padding-right: calc(30px + (63 - 30) * ((100vw - 600px) / (1920 - 600)));
       padding-left: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      max-width: calc(240px + (355 - 240) * ((100vw - 600px) / (1920 - 600)));
     }
   }
 
@@ -979,7 +981,7 @@ body {
     justify-content: end;
     gap: 10px;
     margin-top: auto;
-    margin-bottom: -35px;
+    margin-bottom: -55px;
     right: -20px;
 
     .link {
@@ -1019,7 +1021,7 @@ body {
   }
 
   &__forum {
-    height: 388px;
+    margin-bottom: -20px;
 
     @media screen and (min-width: 600px) {
       height: calc(295px + (388 - 295) * ((100vw - 600px) / (1920 - 600)));
@@ -1062,6 +1064,7 @@ body {
 .profile {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
 
   @media screen and (min-width: 600px) {
@@ -1295,9 +1298,8 @@ body {
 
     &-imgMap {
       position: absolute;
-      top: 23px;
+      top: 45px;
       right: 0;
-      width: 400px;
       height: 430px;
       z-index: -1;
 
@@ -1436,9 +1438,6 @@ body {
   }
 
   &__right {
-    margin-bottom: 22px;
-    margin-right: 22px;
-
     @media screen and (min-width: 600px) {
       margin-right: calc(12px + (22 - 12) * ((100vw - 600px) / (1920 - 600)));
       margin-bottom: calc(12px + (22 - 12) * ((100vw - 600px) / (1920 - 600)));
@@ -1447,13 +1446,10 @@ body {
     &-box {
       display: flex;
       align-items: center;
-      gap: 30px;
-      margin-bottom: 15px;
-      padding-left: 38px;
 
       @media screen and (min-width: 600px) {
         gap: calc(22px + (30 - 22) * ((100vw - 600px) / (1920 - 600)));
-        margin-bottom: calc(15px + (20 - 15) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(10px + (15 - 10) * ((100vw - 600px) / (1920 - 600)));
         padding-left: calc(75px + (38 - 75) * ((100vw - 600px) / (1920 - 600)));
       }
     }
@@ -1507,7 +1503,7 @@ body {
 
 .map {
   &--alt {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
@@ -1863,7 +1859,20 @@ body {
   &__map {
     width: 72%;
 
-    .map {
+    &-box {
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #fff;
+
+      @media screen and (min-width: 600px) {
+        height: calc(380px + (558 - 380) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-img {
+      border-radius: 15px;
+      -o-object-fit: contain;
+      object-fit: contain;
       height: 100%;
     }
   }
@@ -5207,6 +5216,63 @@ body {
   }
 }
 
+.orientation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  opacity: 1;
+  z-index: -1;
+  visibility: hidden;
+  transition: opacity 0.23s ease-in-out, z-index 0.23s ease-in-out, visibility 0.23s ease-in-out;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  &__icon {
+    margin-bottom: -30px;
+  }
+
+  &__text {
+    text-align: center;
+    text-wrap: balance;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    max-width: 298px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (orientation: portrait) {
+  .orientation {
+    opacity: 1;
+    z-index: 1000000;
+    visibility: visible;
+  }
+}
 
 @media (max-width: 1200px) {
 

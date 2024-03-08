@@ -649,17 +649,19 @@ body.no-scroll {
 }
 @media screen and (min-width: 600px) {
   .header__content-imgRight {
-    width: calc(295px + 100 * (100vw - 600px) / 1320);
+    width: calc(305px + 90 * (100vw - 600px) / 1320);
     height: calc(123px + 20 * (100vw - 600px) / 1320);
   }
 }
 .header__left {
   padding: 12px 46px 14px 23px;
+  width: 100%;
 }
 @media screen and (min-width: 600px) {
   .header__left {
     padding-right: calc(30px + 33 * (100vw - 600px) / 1320);
     padding-left: calc(15px + 15 * (100vw - 600px) / 1320);
+    max-width: calc(240px + 115 * (100vw - 600px) / 1320);
   }
 }
 .header__center {
@@ -919,7 +921,7 @@ body.no-scroll {
   justify-content: end;
   gap: 10px;
   margin-top: auto;
-  margin-bottom: -35px;
+  margin-bottom: -55px;
   right: -20px;
 }
 .content__bot .link:last-child {
@@ -954,7 +956,7 @@ body.no-scroll {
   backdrop-filter: blur(300px);
 }
 .content__forum {
-  height: 388px;
+  margin-bottom: -20px;
 }
 @media screen and (min-width: 600px) {
   .content__forum {
@@ -997,6 +999,7 @@ body.no-scroll {
 .profile {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
 }
 @media screen and (min-width: 600px) {
@@ -1217,9 +1220,8 @@ body.no-scroll {
 }
 .footer__content-imgMap {
   position: absolute;
-  top: 23px;
+  top: 45px;
   right: 0;
-  width: 400px;
   height: 430px;
   z-index: -1;
 }
@@ -1352,10 +1354,6 @@ body.no-scroll {
     font-size: calc(11px + 3 * (100vw - 600px) / 1320);
   }
 }
-.footer__right {
-  margin-bottom: 22px;
-  margin-right: 22px;
-}
 @media screen and (min-width: 600px) {
   .footer__right {
     margin-right: calc(12px + 10 * (100vw - 600px) / 1320);
@@ -1365,14 +1363,11 @@ body.no-scroll {
 .footer__right-box {
   display: flex;
   align-items: center;
-  gap: 30px;
-  margin-bottom: 15px;
-  padding-left: 38px;
 }
 @media screen and (min-width: 600px) {
   .footer__right-box {
     gap: calc(22px + 8 * (100vw - 600px) / 1320);
-    margin-bottom: calc(15px + 5 * (100vw - 600px) / 1320);
+    margin-bottom: calc(10px + 5 * (100vw - 600px) / 1320);
     padding-left: calc(75px + -37 * (100vw - 600px) / 1320);
   }
 }
@@ -1420,7 +1415,7 @@ body.no-scroll {
 }
 
 .map--alt {
-  margin-top: 30px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
@@ -1721,7 +1716,20 @@ body.no-scroll {
 .metro__map {
   width: 72%;
 }
-.metro__map .map {
+.metro__map-box {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+@media screen and (min-width: 600px) {
+  .metro__map-box {
+    height: calc(380px + 178 * (100vw - 600px) / 1320);
+  }
+}
+.metro__map-img {
+  border-radius: 15px;
+  -o-object-fit: contain;
+  object-fit: contain;
   height: 100%;
 }
 
@@ -4706,6 +4714,59 @@ body.no-scroll {
   }
 }
 
+.orientation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  opacity: 1;
+  z-index: -1;
+  visibility: hidden;
+  transition: opacity 0.23s ease-in-out, z-index 0.23s ease-in-out, visibility 0.23s ease-in-out;
+}
+.orientation__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+}
+.orientation__box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.orientation__icon {
+  margin-bottom: -30px;
+}
+.orientation__text {
+  text-align: center;
+  text-wrap: balance;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  max-width: 298px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (orientation: portrait) {
+  .orientation {
+    opacity: 1;
+    z-index: 1000000;
+    visibility: visible;
+  }
+}
 @media (max-width: 1200px) {
   .calendar__card,
   .news__card {

@@ -54,6 +54,30 @@ $(document).ready(function () {
     const mask = IMask(element, maskOptions)
   }
 
+  var mediaQuery = window.matchMedia('(orientation: portrait)')
+
+  function handleOrientationChange(mediaQuery) {
+    if (mediaQuery.matches) {
+      document.querySelector('.orientation').classList.add('orientation--active')
+    } else {
+      document.querySelector('.orientation').classList.remove('orientation--active')
+    }
+  }
+
+  mediaQuery.addEventListener(handleOrientationChange)
+  handleOrientationChange(mediaQuery)
+
+  const contentElem = document.querySelectorAll('.content__elem')
+  contentElem.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (item.classList.contains('.content__item--active')) {
+        item.classList.remove('content__elem--active')
+      } else {
+        item.classList.add('content__elem--active')
+      }
+    })
+  })
+
   const eye = document.querySelectorAll('.office__edit-eye')
   eye?.forEach((elem) => {
     elem.addEventListener('click', function () {
@@ -283,7 +307,7 @@ $(document).ready(function () {
         acc.classList.add('accordionBot--active')
         content.style.maxHeight = content.scrollHeight + 'px'
         footerRight.style.transition = 'unset'
-        footerRight.style.paddingTop = '45px'
+        footerRight.style.paddingTop = '65px'
       }
     })
   })
@@ -341,56 +365,6 @@ $(document).ready(function () {
         }
 
         myMap.geoObjects.add(myCollection)
-
-        myPlacemark.events.add('click', function (event) {
-          event.preventDefault()
-        })
-      }
-
-      if (document.querySelector('#mapYandexBig')) {
-        var points = [
-          ['<div class="map-baloon"><p></p></div>', '38.999513', '-77.036536'],
-          ['<div class="map-baloon"><p></p></div>', '38.899513', '-77.136536'],
-          ['<div class="map-baloon"><p></p></div>', '38.799513', '-77.236536'],
-          ['<div class="map-baloon"><p></p></div>', '38.699513', '-77.336536'],
-          ['<div class="map-baloon"><p></p></div>', '38.999513', '-76.636536'],
-          ['<div class="map-baloon"><p></p></div>', '38.899513', '-76.736536'],
-          ['<div class="map-baloon"><p></p></div>', '38.799513', '-76.836536'],
-          ['<div class="map-baloon"><p></p></div>', '38.699513', '-76.936536'],
-        ]
-        myMapBig = new ymaps.Map('mapYandexBig', {
-          center: [38.899513, -77.036536],
-          zoom: 13,
-          // controls: ['zoomControl', 'geolocationControl', 'trafficControl'],
-          controls: [],
-        })
-
-        if (window.innerWidth < 1024) {
-          myMapBig.behaviors.disable('scrollZoom')
-          myMapBig.behaviors.disable('drag')
-        }
-
-        for (i = 0; i < points.length; i++) {
-          var myPlacemark = new ymaps.Placemark(
-            [points[i][1], points[i][2]],
-            {
-              balloonContent: points[i][0],
-            },
-            {
-              iconLayout: 'default#image',
-              iconImageHref: '../assets/images/icons/location.svg',
-              balloonLayout: '../assets/images/icons/location.svg',
-            }
-          )
-          myCollection.add(myPlacemark)
-          // myMapBig.geoObjects.add(myPlacemark)
-
-          // myMapBig.events.add('click', function (e) {
-          //   myMapBig.balloon.close()
-          // })
-        }
-
-        myMapBig.geoObjects.add(myCollection)
 
         myPlacemark.events.add('click', function (event) {
           event.preventDefault()

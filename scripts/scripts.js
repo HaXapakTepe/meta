@@ -54,17 +54,22 @@ $(document).ready(function () {
     const mask = IMask(element, maskOptions)
   }
 
-  var mediaQuery = window.matchMedia('(orientation: portrait)')
+  const mediaQuery = window.matchMedia('(orientation: portrait)')
 
-  function handleOrientationChange(mediaQuery) {
-    if (mediaQuery.matches) {
+  function handleOrientationChange(event) {
+    if (event.matches) {
       document.querySelector('.orientation').classList.add('orientation--active')
     } else {
       document.querySelector('.orientation').classList.remove('orientation--active')
     }
   }
 
-  mediaQuery.addEventListener(handleOrientationChange)
+  if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener('change', handleOrientationChange)
+  } else {
+    mediaQuery.addListener(handleOrientationChange)
+  }
+
   handleOrientationChange(mediaQuery)
 
   const contentElem = document.querySelectorAll('.content__elem')

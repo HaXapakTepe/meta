@@ -56,21 +56,11 @@ $(document).ready(function () {
 
   const mediaQuery = window.matchMedia('(orientation: portrait)')
 
-  function handleOrientationChange(event) {
-    if (event.matches) {
-      document.querySelector('.orientation').classList.add('orientation--active')
-    } else {
-      document.querySelector('.orientation').classList.remove('orientation--active')
-    }
-  }
-
   if (mediaQuery.addEventListener) {
     mediaQuery.addEventListener('change', handleOrientationChange)
   } else {
     mediaQuery.addListener(handleOrientationChange)
   }
-
-  handleOrientationChange(mediaQuery)
 
   const contentElem = document.querySelectorAll('.content__elem')
   contentElem.forEach((item) => {

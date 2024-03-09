@@ -54,22 +54,22 @@ $(document).ready(function () {
     const mask = IMask(element, maskOptions)
   }
 
-  const mediaQuery = window.matchMedia('(orientation: portrait)')
-
-  if (mediaQuery.addEventListener) {
-    mediaQuery.addEventListener('change', handleOrientationChange)
-  } else {
-    mediaQuery.addListener(handleOrientationChange)
-  }
-
   const contentElem = document.querySelectorAll('.content__elem')
-  contentElem.forEach((item) => {
-    item.addEventListener('click', () => {
-      if (item.classList.contains('.content__item--active')) {
+
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('.content__elem')) {
+      contentElem.forEach(function (item) {
         item.classList.remove('content__elem--active')
-      } else {
-        item.classList.add('content__elem--active')
-      }
+      })
+    }
+  })
+
+  contentElem?.forEach(function (item) {
+    item.addEventListener('click', function () {
+      contentElem.forEach(function (item) {
+        item.classList.remove('content__elem--active')
+      })
+      this.classList.add('content__elem--active')
     })
   })
 

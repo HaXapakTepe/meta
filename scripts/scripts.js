@@ -54,22 +54,39 @@ $(document).ready(function () {
     const mask = IMask(element, maskOptions)
   }
 
+  const container = document.getElementById('myPanzoom')
+  const options = { click: 'toggleCover', maxScale: 7 }
+
+  const panzoomInstance = new Panzoom(container, options)
+
+  // const zoomInButton = document.getElementById('zoomInButton')
+  // zoomInButton.addEventListener('click', function () {
+  //   panzoomInstance.zoomIn()
+  // })
+
+  // const zoomOutButton = document.getElementById('zoomOutButton')
+  // zoomOutButton.addEventListener('click', function () {
+  //   panzoomInstance.zoomOut()
+  // })
+
+  // const fullscreenButton = document.getElementById('fullscreenButton')
+  // fullscreenButton.addEventListener('click', function () {
+  //   panzoomInstance.toggleFS()
+  // })
+
+  const dataPath = document.querySelectorAll('[data-path="path"]')
+  console.log(dataPath)
+
   const contentElem = document.querySelectorAll('.content__elem')
 
-  document.addEventListener('click', function (event) {
-    if (!event.target.closest('.content__elem')) {
-      contentElem.forEach(function (item) {
-        item.classList.remove('content__elem--active')
-      })
-    }
-  })
-
   contentElem?.forEach(function (item) {
-    item.addEventListener('click', function () {
-      contentElem.forEach(function (item) {
+    const icon = item.querySelector('.content__elem-icon')
+    icon.addEventListener('click', function () {
+      if (item.classList.contains('content__elem--active')) {
         item.classList.remove('content__elem--active')
-      })
-      this.classList.add('content__elem--active')
+      } else {
+        item.classList.add('content__elem--active')
+      }
     })
   })
 

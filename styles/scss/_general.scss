@@ -1682,7 +1682,7 @@ body {
   }
 
   b {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -3060,7 +3060,7 @@ body {
 
 .form {
   display: none;
-  max-width: 345px;
+  max-width: 400px;
   width: 100%;
   margin-left: 15px;
   margin-right: 15px;
@@ -3091,6 +3091,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    &--alt {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
   }
 
   &__subtitle {
@@ -3109,7 +3121,7 @@ body {
     padding: 12px 15px;
     font-size: 12px;
     border-radius: 10px;
-    background: #ced4db;
+    background: #cdcece;
 
     &::-webkit-input-placeholder {
       color: rgb(118, 124, 125);
@@ -3180,9 +3192,80 @@ body {
   }
 
   &__info {
-    text-align: center;
     color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
+  }
+
+  &__file {
+    color: #767C7D;
+    font-size: 12px;
+  }
+
+  &__comment {
+    padding: 12px 18px 12px 12px;
+    border-radius: 10px;
+    background-color: #4d4f50;
+
+    &-box {
+      overflow: auto;
+      padding-right: 10px;
+
+      @media screen and (min-width: 600px) {
+        height: calc(280px + (380 - 280) * ((100vw - 600px) / (1920 - 600)));
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 19px;
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 10px;
+        border-radius: 19px;
+        background: rgb(210, 213, 214);
+      }
+
+    }
+
+    &-info {
+      color: #767C7D;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  &__icon {
+    @media screen and (min-width: 600px) {
+      height: calc(32px + (40 - 32) * ((100vw - 600px) / (1920 - 600)));
+      width: calc(32px + (40 - 32) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    svg {
+      path {
+        transition: fill .23s ease-in-out;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: #0F9978;
+        }
+      }
+    }
   }
 }
 
@@ -3371,6 +3454,7 @@ body {
   }
 
   &__item {
+    position: relative;
     width: 32.3%;
     display: flex;
     flex-direction: column;
@@ -3378,37 +3462,45 @@ body {
     background-color: #CED4D9;
     transition: background-color .23s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
 
     @media screen and (min-width: 600px) {
-      padding: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      padding-right: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      padding-left: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      padding-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &--alt {
+      @media screen and (min-width: 600px) {
+        padding-top: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
     }
 
     &:hover {
       background-color: #fff;
     }
 
-    &-box {
-      position: relative;
+    &-title {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-
-      @media screen and (min-width: 600px) {
-        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
-      }
-
-      .office__num {
-        right: 0;
-      }
-    }
-
-    &-title {
-      color: #20292a;
+      gap: 10px;
       font-weight: 700;
       line-height: 125%;
+      color: #20292a;
 
       @media screen and (min-width: 600px) {
         font-size: calc(18px + (24 - 18) * ((100vw - 600px) / (1920 - 600)));
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+      }
+
+      &.title {
+        color: #fff;
+
+        &::after,
+        &::before {
+          border-radius: 15px 15px 0 0;
+          background-image: linear-gradient(90.00deg, rgb(13, 152, 119), rgb(46, 176, 145) 99.898%);
+        }
       }
     }
 
@@ -3435,17 +3527,13 @@ body {
   }
 
   &__num {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 25px;
-    padding: 9px 15px;
+    padding: 9px 8px;
     line-height: 1;
-    color: rgb(255, 255, 255);
+    color: #2bae8f;
     font-weight: 500;
-    font-size: 12px;
-    border-radius: 108px;
-    background: rgb(238, 79, 79);
+    font-size: 14px;
+    border-radius: 1008px;
+    background-color: rgb(255, 255, 255);
   }
 
   &__bot {
@@ -5372,6 +5460,78 @@ body {
     max-width: 298px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.info {
+  display: none;
+  max-width: 1800px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+  }
+
+  &__inner {
+    padding: 45px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(300px);
+    backdrop-filter: blur(300px);
+    background: linear-gradient(0.00deg, rgba(35, 35, 35, 0.8), rgba(48, 48, 48, 0.4) 100%);
+    overflow: hidden;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+
+    @media screen and (min-width: 600px) {
+      margin-top: calc(20px + (40 - 20) * ((100vw - 600px) / (1920 - 600)));
+      gap: calc(20px + (77 - 20) * ((100vw - 600px) / (1920 - 600)));
+    }
+  }
+
+  &__img {
+    border-radius: 15px;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+    @media screen and (min-width: 600px) {
+      height: calc(280px + (306 - 280) * ((100vw - 600px) / (1920 - 600)));
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 600px) {
+      gap: calc(15px + (30 - 15) * ((100vw - 600px) / (1920 - 600)));
+    }
+
+    &-title {
+      font-weight: 700;
+      color: #fff;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(22px + (32 - 22) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
+
+    &-text {
+      color: #d1d7d7;
+
+      @media screen and (min-width: 600px) {
+        font-size: calc(14px + (16 - 14) * ((100vw - 600px) / (1920 - 600)));
+      }
+    }
   }
 }
 

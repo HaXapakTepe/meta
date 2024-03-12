@@ -29,6 +29,11 @@ $(document).ready(function () {
     placeholder: 'Проблема с доступом',
   })
 
+  $('.form__sendAnOffer').select2({
+    dropdownParent: $('.form__select'),
+    placeholder: 'Хочу предложить свои услуги/товары',
+  })
+
   $('.office__edit-activity').select2({
     dropdownParent: $('.office__edit-select'),
     placeholder: 'Выберите из списка',

@@ -3238,13 +3238,25 @@ body.no-scroll {
   }
 }
 .office__num {
+  position: relative;
+  z-index: 1;
   padding: 9px 8px;
   line-height: 1;
   color: #2bae8f;
   font-weight: 500;
   font-size: 14px;
-  border-radius: 1008px;
-  background-color: rgb(255, 255, 255);
+}
+.office__num::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: -1;
 }
 .office__bot {
   display: flex;
